@@ -1,0 +1,10 @@
+Instructions for using  SSH in Git
+
+1) Check if any key-pair is already present
+    ls -a -l ~/.ssh 
+2) Generate a key-pair 
+    ssh-keygen -t rsa -b 4096 -C "sample text"
+3) To use , start ssh-agent
+    eval $(ssh-agent -s)
+4) To register an existing/new private key in current project
+    ssh-add ~/.ssh/id_rsa
